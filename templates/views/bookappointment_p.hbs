@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Appointment</title>
+    <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
+</head>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .dropdwn {
+        margin: 0 auto;
+    }
+
+    nav {
+        height: 60px;
+        background: #304b98;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+        padding: 5px 0 0 21px;
+        width: 44px;
+        height: auto;
+    }
+
+    nav ul {
+        padding: 0;
+        margin: 0;
+        float: right;
+        margin-right: 30px;
+    }
+
+    nav ul li {
+        background: #304b98;
+        position: relative;
+        list-style: none;
+        display: inline-block;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0 21px;
+        color: white;
+        text-decoration: none;
+        line-height: 60px;
+        font-size: 12px;
+    }
+
+    nav ul li a:hover {
+        background: #eeeff5;
+        color: #304b98;
+    }
+
+    nav ul ul {
+        position: absolute;
+        top: 60px;
+        display: none;
+    }
+
+    nav ul li:hover>ul {
+        display: block;
+    }
+
+    nav ul ul li {
+        width: 150px;
+        float: none;
+        display: list-item;
+        position: relative;
+    }
+
+    img {
+        position: absolute;
+        /* margin: 14px; */
+        height: 48px;
+        width: 62px;
+        margin-left: 10px;
+        /* margin-bottom: 3px; */
+        margin-top: 5px;
+    }
+
+
+
+    .all {
+        background-image: linear-gradient(135deg, #EA5455 5%, #FEB692 100%);
+        margin: 0%;
+        padding: 23%;
+        text-align: center;
+    }
+
+    h1 {
+        width: 50%;
+        color: white;
+        margin-top: -28%;
+        margin-left: 23%;
+        text-shadow: 0 5px 5px black;
+    }
+
+    .f1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .l1 {
+        position: absolute;
+        left: 37%;
+        top: 35%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l2 {
+        position: absolute;
+        left: 37%;
+        top: 41%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l3 {
+        position: absolute;
+        left: 37%;
+        top: 46%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l4 {
+        position: absolute;
+        left: 37%;
+        top: 51%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l5 {
+        position: absolute;
+        left: 37%;
+        top: 56%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l6 {
+        position: absolute;
+        left: 37%;
+        top: 61%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l7 {
+        position: absolute;
+        left: 37%;
+        top: 66%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l8 {
+        position: absolute;
+        left: 37%;
+        top: 71%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l9 {
+        position: absolute;
+        left: 37%;
+        top: 76%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    input {
+        border-radius: 10px;
+        border: 1px solid white;
+        color: #123597;
+        box-shadow: 0 2px 4px black;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .btn1 {
+        color: #123597;
+        position: absolute;
+        margin-left: -6%;
+        margin-top: 47%;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    #name {
+        position: absolute;
+        left: 112%;
+        top: 15%;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    #tm {
+        position: absolute;
+        left: 112%;
+        top: 15%;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    #spec {
+        position: absolute;
+        left: 112%;
+        top: 15%;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+
+    <div class="dropdwn">
+        <nav>
+            <img src="/images/icon.png" alt="clinic logo">
+    
+            <ul>
+                <li><a href="home_p">Dashboard</a></li>
+    
+    
+                <li><a href="addpatient_p">Create Patient</a></li>
+    
+    
+                <li><a href="">Appointment</a>
+                    <ul>
+                        <li><a href="check_p">Book Appointment</a></li>
+                        <li><a href="cancelp_app">Cancel Appointment</a></li>
+                    </ul>
+                </li>
+    
+                <li><a href="logout_p">Logout</a></li>
+            </ul>
+    
+        </nav>
+    </div>
+
+    <div class="all">
+        <h1>Book Appointment</h1>
+        <form action="/bookappointment_p" method="post" class="f1">
+            <label class="l1"> Enter Name<input type="text" id="name" name="p_name" placeholder="Enter your name"></label>
+            <label class="l2"> Select doctor<select name="name" id="name">
+                {{#each Docname}}
+                    <option>{{docname}}</option>
+                {{/each}}
+            </select></label>
+            <label class="l3"> Select date<input type="date" id="da" name="date" placeholder="Enter date" value="{{Datte}}" readonly></label>
+            <label for="" class="l4">Select Time
+            <select name="time" id="tm">
+                <option value="Choose">Choose</option>
+                <option value="8am-8:30am">8am-8:30am</option>
+                <option value="8:30am-9am">8:30am-9am</option>
+                <option value="9am-9:30am">9am-9:30am</option>
+                <option value="9:30am-10am">9:30am-10am</option>
+                <option value="10am-10:30am">10am-10:30am</option>
+                <option value="10:30am-11am">10:30am-11am</option>
+            </select></label>
+            <label for="" class="l5">Specilization
+            <select name="spec" id="spec">
+                <option value="Choose">Choose</option>
+                <option value="Cardiologist">Cardiologist</option>
+                <option value="Neurologist">Neurologist</option>
+                <option value="Pediatrician">Pediatrician</option>
+                <option value="Gynecologist">Gynecologist</option>
+                <option value="Psychiatrist">Psychiatrist</option>
+            </select></label>
+            <label class="l6"> Phone Number<input type="number" id="num" name="num" placeholder="Enter your phonenumber"></label>
+            <label class="l7"> E-mail<input type="email" id="email" name="email" placeholder="Enter your email"></label>
+            <label class="l8"> Comments<input type="text" id="note" name="note" placeholder="Enter any comments"></label>
+            <input type="submit" value="Submit" class="btn1">
+        </form> 
+    </div>
+</body>
+
+</html>

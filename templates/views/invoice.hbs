@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
+</head>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .dropdwn {
+            margin: 0 auto;
+        }
+    
+        nav {
+            height: 60px;
+            background: #304b98;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+    
+        .logo {
+            padding: 5px 0 0 21px;
+            width: 44px;
+            height: auto;
+        }
+    
+        nav ul {
+            padding: 0;
+            margin: 0;
+            float: right;
+            margin-right: 30px;
+        }
+    
+        nav ul li {
+            background: #304b98;
+            position: relative;
+            list-style: none;
+            display: inline-block;
+        }
+    
+        nav ul li a {
+            display: block;
+            padding: 0 21px;
+            color: white;
+            text-decoration: none;
+            line-height: 60px;
+            font-size: 12px;
+        }
+    
+        nav ul li a:hover {
+            background: #eeeff5;
+            color: #304b98;
+        }
+    
+        nav ul ul {
+            position: absolute;
+            top: 60px;
+            display: none;
+        }
+    
+        nav ul li:hover>ul {
+            display: block;
+        }
+    
+        nav ul ul li {
+            width: 150px;
+            float: none;
+            display: list-item;
+            position: relative;
+        }
+    
+        img {
+            position: absolute;
+            /* margin: 14px; */
+            height: 48px;
+            width: 62px;
+            margin-left: 10px;
+            /* margin-bottom: 3px; */
+            margin-top: 5px;
+        }
+    
+    
+    
+        .container {
+            background-image: linear-gradient(135deg, #EA5455 5%, #FEB692 100%);
+            margin: 0%;
+            padding: 23%;
+            text-align: center;
+    
+        }
+    
+        h1 {
+            width: 50%;
+            color: white;
+            margin-top: -27%;
+            margin-left: 25%;
+            text-shadow: 0 5px 5px black;
+        }
+    
+        .f1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    
+        .l1 {
+            position: absolute;
+            left: 40%;
+            top: 35%;
+            color: white;
+            font-size: 19px;
+            text-shadow: 0 3px 5px black;
+        }
+    
+        .l2 {
+            position: absolute;
+            left: 40%;
+            top: 41%;
+            color: white;
+            font-size: 19px;
+            text-shadow: 0 3px 5px black;
+        }
+    
+        .l3 {
+            position: absolute;
+            left: 40%;
+            top: 46%;
+            color: white;
+            font-size: 19px;
+            text-shadow: 0 3px 5px black;
+        }
+    
+        .l4 {
+            position: absolute;
+            left: 40%;
+            top: 51%;
+            color: white;
+            font-size: 19px;
+            text-shadow: 0 3px 5px black;
+        }
+    
+        .l5 {
+            position: absolute;
+            left: 40%;
+            top: 56%;
+            color: white;
+            font-size: 19px;
+            text-shadow: 0 3px 5px black;
+        }
+    
+        .l6 {
+            position: absolute;
+            left: 40%;
+            top: 61%;
+            color: white;
+            font-size: 19px;
+            text-shadow: 0 3px 5px black;
+        }
+    
+        .l7 {
+            position: absolute;
+            left: 40%;
+            top: 66%;
+            color: white;
+            font-size: 19px;
+            text-shadow: 0 3px 5px black;
+        }
+    
+        .l8 {
+            position: absolute;
+            left: 40%;
+            top: 71%;
+            color: white;
+            font-size: 19px;
+            text-shadow: 0 3px 5px black;
+        }
+    
+        .l9 {
+            position: absolute;
+            left: 40%;
+            top: 76%;
+            color: white;
+            font-size: 19px;
+            text-shadow: 0 3px 5px black;
+        }
+    
+        input {
+            border-radius: 10px;
+            border: 1px solid white;
+            color: #123597;
+            box-shadow: 0 2px 4px black;
+            text-align: center;
+            padding: 5px;
+        }
+    
+        #spec {
+            position: absolute;
+            left: 48%;
+            top: 51%;
+            border: 1px solid white;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+    
+        #gen {
+            position: absolute;
+            left: 45%;
+            top: 56%;
+            border: 1px solid white;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+    
+        #sta {
+            position: absolute;
+            left: 45%;
+            top: 61%;
+            border: 1px solid white;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+    
+        .btn1 {
+            position: absolute;
+            left: 50%;
+            top: 58%;
+            border: 1px solid white;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+    
+        .btn2 {
+            position: absolute;
+            left: 51%;
+            top: 58%;
+            border: 1px solid white;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+    
+        a:link {
+            text-decoration: none;
+        }
+    
+        .icon-container {
+            padding: 2%;
+        }
+    </style>
+
+<body>
+
+    <div class="dropdwn">
+        <nav>
+            <img src="/images/icon.png" alt="clinic logo">
+            <ul>
+                <li><a href="home_a">Dashboard</a></li>
+                <li><a href="">Doctor</a>
+                    <ul>
+                        <li><a href="createdoc">Add Doctor</a></li>
+                        <li><a href="doclist">Doctor List</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Patient</a>
+                    <ul>
+                        <li><a href="addpa">Add Patient</a></li>
+                        <li><a href="patlist">Patient List</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Appointment</a>
+                    <ul>
+                        <li><a href="check_a">Book Appointment</a></li>
+                        <li><a href="cancel_app">Cancel Appointment</a></li>
+                        <li><a href="applist">Appointment List</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Schedule</a>
+                    <ul>
+                        <li><a href="addsch">Add Schedule</a></li>
+                        <li><a href="schlist">Schedule List</a></li>
+                    </ul>
+                </li>
+                <li><a href="apllist">Applicant List</a></li>
+                <li><a href="payment">Payment</a></li>
+                <li><a href="invoice">Invoice</a></li>
+                <li><a href="logout">Logout</a></li>
+            </ul>
+    
+        </nav>
+    </div>
+
+    <div class="container">
+        <h1>Invoice</h1>
+        <form action="/invoice" method="post">
+        <label class="l1">Enter doctor's name <input type="text" name="dn" placeholder="Doctor's name"></label>
+        <label class="l2">Invoice date <input name="inv" value="{{regToday}}" readonly ></label>
+        <label class="l3">Enter detail's <input type="text" name="det" placeholder="Invoice to"></label>
+        <label class="l4"> Total amount <input type="number" name="amn" placeholder="Total Amount"></label>
+        <button class="btn1">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

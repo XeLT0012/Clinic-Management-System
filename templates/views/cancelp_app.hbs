@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
+</head>
+
+<style>
+    body {
+        background-image: linear-gradient(135deg, #97ABFF 10%, #123597 100%);
+        margin: 0%;
+        padding: 25%;
+        text-align: center;
+    }
+
+    h1 {
+        top: 5%;
+        position: absolute;
+        left: 44%;
+        color: rgb(255 255 255);
+        font-size: 32px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    input {
+        position: absolute;
+        left: 47%;
+        top: 136px;
+        border-radius: 10px;
+        border: 1px solid white;
+        color: #123597;
+        text-align: center;
+        padding: 3px;
+    }
+
+    .btn1 {
+        position: absolute;
+        left: 48%;
+        top: 175px;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    .btn2 {
+        position: absolute;
+        left: 53%;
+        top: 175px;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    .btn2 a {
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div>
+        <h1>Cancel Appointment</h1>
+        <form action="/cancelp_app" method="post">
+            <input type="number" id="tok" name="tok" placeholder="Search by patient token number">
+            <button type="submit" value="submit" class="btn1">Submit</button>
+        </form>
+        <button class="btn2"><a href="home_p">Go Back</a></button>
+    </div>
+</body>
+
+</html>

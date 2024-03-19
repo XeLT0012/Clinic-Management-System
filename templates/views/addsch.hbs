@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Leave</title>
+    <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
+</head>
+
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .dropdwn {
+        margin: 0 auto;
+    }
+
+    nav {
+        height: 60px;
+        background: #304b98;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+        padding: 5px 0 0 21px;
+        width: 44px;
+        height: auto;
+    }
+
+    nav ul {
+        padding: 0;
+        margin: 0;
+        float: right;
+        margin-right: 30px;
+    }
+
+    nav ul li {
+        background: #304b98;
+        position: relative;
+        list-style: none;
+        display: inline-block;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0 21px;
+        color: white;
+        text-decoration: none;
+        line-height: 60px;
+        font-size: 12px;
+    }
+
+    nav ul li a:hover {
+        background: #eeeff5;
+        color: #304b98;
+    }
+
+    nav ul ul {
+        position: absolute;
+        top: 60px;
+        display: none;
+    }
+
+    nav ul li:hover>ul {
+        display: block;
+    }
+
+    nav ul ul li {
+        width: 150px;
+        float: none;
+        display: list-item;
+        position: relative;
+    }
+
+    img {
+        position: absolute;
+        /* margin: 14px; */
+        height: 48px;
+        width: 62px;
+        margin-left: 10px;
+        /* margin-bottom: 3px; */
+        margin-top: 5px;
+    }
+
+
+
+    .container {
+        background-image: linear-gradient(135deg, #EA5455 5%, #FEB692 100%);
+        margin: 0%;
+        padding: 23%;
+        text-align: center;
+    }
+
+    h1 {
+        width: 50%;
+        color: white;
+        margin-top: -26%;
+        margin-left: 26%;
+        text-shadow: 0 5px 5px black;
+    }
+
+    .f1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .l1 {
+        position: absolute;
+        left: 40%;
+        top: 35%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l2 {
+        position: absolute;
+        left: 40%;
+        top: 41%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l3 {
+        position: absolute;
+        left: 40%;
+        top: 46%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l4 {
+        position: absolute;
+        left: 40%;
+        top: 51%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l5 {
+        position: absolute;
+        left: 40%;
+        top: 56%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l6 {
+        position: absolute;
+        left: 33%;
+        top: 62%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l7 {
+        position: absolute;
+        left: 40%;
+        top: 66%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l8 {
+        position: absolute;
+        left: 40%;
+        top: 71%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l9 {
+        position: absolute;
+        left: 40%;
+        top: 76%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    input {
+        border-radius: 10px;
+        border: 1px solid white;
+        color: #123597;
+        box-shadow: 0 2px 4px black;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #spec {
+        position: absolute;
+        left: 107%;
+        top: 17%;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    #name {
+        position: absolute;
+        left: 107%;
+        top: 17%;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    #tm {
+        position: absolute;
+        left: 107%;
+        top: -4%;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    .btn {
+        position: absolute;
+        left: 47%;
+        top: 61%;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+</style>
+
+
+<body>
+
+    <div class="dropdwn">
+        <nav>
+            <img src="/images/icon.png" alt="clinic logo">
+            <ul>
+                <li><a href="home_a">Dashboard</a></li>
+                <li><a href="">Doctor</a>
+                    <ul>
+                        <li><a href="createdoc">Add Doctor</a></li>
+                        <li><a href="doclist">Doctor List</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Patient</a>
+                    <ul>
+                        <li><a href="addpa">Add Patient</a></li>
+                        <li><a href="patlist">Patient List</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Appointment</a>
+                    <ul>
+                        <li><a href="check_a">Book Appointment</a></li>
+                        <li><a href="cancel_app">Cancel Appointment</a></li>
+                        <li><a href="applist">Appointment List</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Schedule</a>
+                    <ul>
+                        <li><a href="addsch">Add Schedule</a></li>
+                        <li><a href="schlist">Schedule List</a></li>
+                    </ul>
+                </li>
+                <li><a href="apllist">Applicant List</a></li>
+                <li><a href="payment">Payment</a></li>
+                <li><a href="invoice">Invoice</a></li>
+                <li><a href="logout">Logout</a></li>
+            </ul>
+
+        </nav>
+    </div>
+
+    <div class="container">
+        <h1>Leave for doctor</h1>
+        <form action="/addsch" method="post">
+            <label class="l1">Select doctor<select name="sname" id="name">
+                    {{#each Docname}}
+                    <option>{{docname}}</option>
+                    {{/each}}
+                </select></label>
+            <label class="l2">Select Start Date<input type="date" id="name" name="sdate"
+                    placeholder="Enter Start date"></label>
+            <label class="l3">Select End Date<input type="date" id="name" name="edate"
+                    placeholder="Enter End date"></label>
+            <label for="" class="l4">Specilization
+                <select name="spec" id="spec">
+                    <option value="Choose">Choose</option>
+                    <option value="Cardiologist">Cardiologist</option>
+                    <option value="Neurologist">Neurologist</option>
+                    <option value="Pediatrician">Pediatrician</option>
+                    <option value="Pediatrician">Dermatologist</option>
+                    <option value="Pediatrician">Gynecologist</option>
+                    <option value="Pediatrician">Dentist</option>
+                    <option value="Pediatrician">Psychiatrist</option>
+                </select></label>
+            <label for="" class="l5">Select Status
+                <select name="status" id="tm">
+                    <option value="Choose">Choose</option>
+                    <option value="Available">Available</option>
+                    <option value="Not-available">Not-available</option>
+                </select></label>
+            <label class="l6">
+                <h4> ***enter only startdate if leave is equired for only one day*** </h4>
+            </label>
+            <button type="submit" value="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

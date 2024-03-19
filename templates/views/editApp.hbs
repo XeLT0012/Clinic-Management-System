@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Appointment</title>
+    <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
+</head>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        background-image: linear-gradient(135deg, #EA5455 5%, #FEB692 100%);
+        margin: 0%;
+        padding: 25%;
+        text-align: center;
+
+    }
+
+    h1 {
+        width: 50%;
+        color: white;
+        margin-top: -26%;
+        margin-left: 26%;
+        text-shadow: 0 5px 5px black;
+    }
+
+    .f1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .l1 {
+        position: absolute;
+        left: 40%;
+        top: 35%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l2 {
+        position: absolute;
+        left: 40%;
+        top: 41%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l3 {
+        position: absolute;
+        left: 40%;
+        top: 46%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l4 {
+        position: absolute;
+        left: 40%;
+        top: 51%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l5 {
+        position: absolute;
+        left: 40%;
+        top: 56%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l6 {
+        position: absolute;
+        left: 40%;
+        top: 61%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l7 {
+        position: absolute;
+        left: 40%;
+        top: 66%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l8 {
+        position: absolute;
+        left: 40%;
+        top: 71%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l9 {
+        position: absolute;
+        left: 40%;
+        top: 76%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l10 {
+        position: absolute;
+        left: 40%;
+        top: 82%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    input {
+        border-radius: 10px;
+        border: 1px solid white;
+        color: #123597;
+        box-shadow: 0 2px 4px black;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #spec {
+        position: absolute;
+        left: 107%;
+        top: 17%;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    #name {
+        position: absolute;
+        left: 107%;
+        top: 17%;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    #tm {
+        position: absolute;
+        left: 107%;
+        top: 17%;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    #fpay {
+        position: absolute;
+        left: 107%;
+        top: 17%;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+
+    .btn {
+        position: absolute;
+        left: 49%;
+        top: 73%;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    .btn2 {
+        position: absolute;
+        left: 49%;
+        top: 78%;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    a:link {
+            text-decoration: none;
+        }
+</style>
+
+<body>
+
+    <div class="container">
+        <h1>Edit appointment list</h1>
+        <form action="/editApp" method="post">
+            <label class="l1"> Enter Name<input type="text" id="name" name="p_name" placeholder="Enter your name" value="{{pname}}"></label>
+            <label class="l2"> Doctor Name<input type="text" id="name" name="name" value="{{dname}}"></label>
+            <label class="l3"> Date<input type="date" id="name" name="date" placeholder="Enter date" value="{{date}}"></label>
+            <label for="" class="l4">Select Time
+            <select name="time" id="tm">
+                <option value="Choose">Choose</option>
+                <option value="8am-8:30am">8am-8:30am</option>
+                <option value="8:30am-9am">8:30am-9am</option>
+                <option value="9am-9:30am">9am-9:30am</option>
+                <option value="9:30am-10am">9:30am-10am</option>
+                <option value="10am-10:30am">10am-10:30am</option>
+                <option value="10:30am-11am">10:30am-11am</option>
+            </select></label>
+            <label class="l5"> Phone Number<input type="number" id="name" name="num" placeholder="Enter your phonenumber" value="{{pno}}"></label>
+            <label class="l6"> E-mail<input type="email" id="name" name="email" placeholder="Enter your email" value="{{email}}" readonly></label>
+            <label class="l7"> Comments<input type="text" id="name" name="note" placeholder="Enter any comments" value="{{com}}"></label>
+            <input type="submit" value="Submit" class="btn">
+            <button class="btn2"><a href="/applist">Go Back</a></button>
+        </form>
+    </div>
+</body>
+
+</html>

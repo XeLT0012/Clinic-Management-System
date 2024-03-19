@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
+</head>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .dropdwn {
+        margin: 0 auto;
+    }
+
+    nav {
+        height: 60px;
+        background: #304b98;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+        padding: 5px 0 0 21px;
+        width: 44px;
+        height: auto;
+    }
+
+    nav ul {
+        padding: 0;
+        margin: 0;
+        float: right;
+        margin-right: 30px;
+    }
+
+    nav ul li {
+        background: #304b98;
+        position: relative;
+        list-style: none;
+        display: inline-block;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0 21px;
+        color: white;
+        text-decoration: none;
+        line-height: 60px;
+        font-size: 12px;
+    }
+
+    nav ul li a:hover {
+        background: #eeeff5;
+        color: #304b98;
+    }
+
+    nav ul ul {
+        position: absolute;
+        top: 60px;
+        display: none;
+    }
+
+    nav ul li:hover>ul {
+        display: block;
+    }
+
+    nav ul ul li {
+        width: 150px;
+        float: none;
+        display: list-item;
+        position: relative;
+    }
+
+    img {
+        position: absolute;
+        /* margin: 14px; */
+        height: 48px;
+        width: 62px;
+        margin-left: 10px;
+        /* margin-bottom: 3px; */
+        margin-top: 5px;
+    }
+
+
+
+    .all {
+        background-image: linear-gradient(135deg, #EA5455 5%, #FEB692 100%);
+        margin: 0%;
+        padding: 23%;
+        text-align: center;
+    }
+
+    h1 {
+        width: 50%;
+        color: white;
+        margin-top: -28%;
+        margin-left: 23%;
+        text-shadow: 0 5px 5px black;
+    }
+
+    .f1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .l1 {
+        position: absolute;
+        left: 37%;
+        top: 35%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l2 {
+        position: absolute;
+        left: 37%;
+        top: 41%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l3 {
+        position: absolute;
+        left: 37%;
+        top: 46%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l4 {
+        position: absolute;
+        left: 37%;
+        top: 51%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l5 {
+        position: absolute;
+        left: 37%;
+        top: 56%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l6 {
+        position: absolute;
+        left: 37%;
+        top: 61%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l7 {
+        position: absolute;
+        left: 37%;
+        top: 66%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l8 {
+        position: absolute;
+        left: 37%;
+        top: 71%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l9 {
+        position: absolute;
+        left: 37%;
+        top: 76%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    input {
+        border-radius: 10px;
+        border: 1px solid white;
+        color: #123597;
+        box-shadow: 0 2px 4px black;
+        text-align: center;
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <div class="dropdwn">
+        <nav>
+            <img src="/images/icon.png" alt="clinic logo">
+    
+            <ul>
+                <li><a href="home_d">Dashboard</a></li>
+    
+                <li><a href="appointmentlist_d">Appointment List</a></li>
+    
+                <li><a href="schedulelist_d">Schedule List</a></li>
+    
+                <li><a href="logout_d">Logout</a></li>
+            </ul>
+    
+        </nav>
+    </div>
+
+    <div class="all">
+        <h1>Dashboard</h1>
+        <form action="" class="f1">
+            <label class="l1"> Total no. of appointment's
+                <input type="number" value="{{regToday.app}}" readonly></label>
+            <label class="l2"> Appointment's for today
+                <input type="number" value="{{regToday.curr}}" readonly></label>
+            <label class="l3"> Total no. of patient's
+                <input type="number" value="{{regToday.pat}}" readonly></label>
+            <label class="l4">Appointment for Cardiologist
+                <input type="number" value="{{regToday.car}}" readonly></label>
+            <label class="l5">Appointment for Neurologist
+                <input type="number" value="{{regToday.nue}}" readonly></label>
+            <label class="l6">Appointment for Pediatrician
+                <input type="number" value="{{regToday.ped}}" readonly></label>
+            <label class="l7">Appointment for Gynecologist
+                <input type="number" value="{{regToday.gyn}}" readonly></label>
+            <label class="l8">Appointment for Psychiatrist
+                <input type="number" value="{{regToday.syc}}" readonly></label>
+            <label class="l9">New applicant's
+                <input type="number" value="{{regToday.apli}}" readonly></label>
+        </form>
+    </div>
+
+</body>
+
+</html>

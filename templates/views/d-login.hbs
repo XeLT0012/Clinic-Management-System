@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
+    <style>
+        body {
+            background-image: linear-gradient(135deg, #EA5455 10%,#FEB692 100%);
+        }
+    
+        .container {
+            background-image: linear-gradient(135deg, #97ABFF 10%, #123597 100%);
+            width: 43%;
+           /* border: 3px solid linear-gradient(135deg, #cc208e 10%, #6713d2 100%);*/
+            box-shadow: 10px;
+            box-shadow: 0 14px 28px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            padding: 3%;
+            padding-bottom: 20%;
+            margin-left: 26%;
+            margin-top: 12%;
+            position: fixed;
+        }
+    
+        h1 {
+            position: absolute;
+            width: 50%;
+            color: white;
+            margin-top: 29%;
+            text-shadow: 0 1px 2px;
+        }
+    
+        ul a {
+            color: white;
+            text-shadow: 0 1px 2px;
+        }
+    
+        a:link {
+            text-decoration: none;
+        }
+    
+        img {
+            position: absolute;
+            width: 20%;
+            margin-top: 7%;
+            margin-left: 45px;
+        }
+    
+        form {
+            display: inline-block;
+            position: absolute;
+            float: right;
+            margin-top: 7%;
+            margin-left: 60%;
+        }
+    
+        input {
+            padding: 2%;
+            margin: 5%;
+            border-radius: 10px;
+            border: 1px solid white;
+            color: #123597;
+            box-shadow: 0 2px 4px;
+        }
+    
+        ::-webkit-input-placeholder {
+            color: #123597;
+        }
+    
+        .btn1 {
+            color: #123597;
+            position: absolute;
+            margin-left: 55%;
+            margin-top: -3%;
+            border: 1px solid white;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+    
+        .btn2 {
+            color: #123597;
+            position: absolute;
+            margin-left: 12%;
+            margin-top: -3%;
+            border: 1px solid white;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .btn2 a{
+            color: #123597;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Login as doctor</h1>
+        <img src="/images/icon.png" alt="">
+        <form method="post" action="/d-login">
+            <input type="text" id="in1" name="id" placeholder="Enter your doc_id">
+            <input type="password" id="in2" name="pass" placeholder="Enter Your Password"><br><br>
+            <button class="btn1" type="submit">Submit</button>
+            <button class="btn2"><a href="intro">Go Back</a></button>
+        </form>
+    </div>
+</body>
+
+</html>

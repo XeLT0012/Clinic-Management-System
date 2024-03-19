@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
+</head>
+
+<style>
+    body {
+        background-image: linear-gradient(135deg, #97ABFF 10%, #123597 100%);
+        margin: 0%;
+        padding: 25%;
+        text-align: center;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 90%;
+        position: absolute;
+        left: 5%;
+        top: 20%;
+        background-image: linear-gradient(135deg, #f5f7fa 10%, #c3cfe2 100%);
+    }
+
+    h1 {
+        top: 5%;
+        position: absolute;
+        left: 44%;
+        color: rgb(255 255 255);
+        font-size: 32px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .btn2 {
+        position: absolute;
+        left: 5%;
+        top: 9%;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    .btn2 a {
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <h1>Leave List</h1>
+    <div>
+        <table border="1">
+            <thead>
+                <th>Serial no.</th>
+                <th>Doctor Name</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Specialization</th>
+                <th>Status</th>
+            </thead>
+            <tbody>
+                {{!-- each is template engine function which is used for iteration --}}
+                {{#each schlist}}
+                <tr>
+                    <td>{{Sl_no}}</td>
+                    <td>{{sdoc}}</td>
+                    <td>{{sdate}}</td>
+                    <td>{{edate}}</td>
+                    <td>{{spec}}</td>
+                    <td>{{status}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+
+        <button class="btn2"><a href="home_d">Go Back</a></button>
+    </div>
+</body>
+
+</html>

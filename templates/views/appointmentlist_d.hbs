@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
+</head>
+
+<style>
+    body {
+        background-image: linear-gradient(135deg, #97ABFF 10%, #123597 100%);
+        margin: 0%;
+        padding: 25%;
+        text-align: center;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 90%;
+        position: absolute;
+        left: 5%;
+        top: 20%;
+        background-image: linear-gradient(135deg, #f5f7fa 10%, #c3cfe2 100%);
+    }
+
+    h1 {
+        top: 5%;
+        position: absolute;
+        left: 44%;
+        color: rgb(255 255 255);
+        font-size: 32px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    input {
+        position: absolute;
+        left: 5%;
+        top: 69px;
+        border-radius: 10px;
+        border: 1px solid white;
+        color: #123597;
+        text-align: center;
+        padding: 3px;
+    }
+
+    .btn1 {
+        position: absolute;
+        left: 17%;
+        top: 70px;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    .btn2 {
+        position: absolute;
+        left: 22%;
+        top: 70px;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    .btn2 a {
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <h1>Appointment List</h1>
+    <div>
+        <form action="/appsearch_d" method="post">
+            <input type="text" id="sea" name="sea" placeholder="Search by specialisation">
+            <button type="submit" value="submit" class="btn1">Submit</button>
+        </form>
+        <table border="1">
+            <thead>
+                <th>Appointment Id</th>
+                <th>Patient Name</th>
+                <th>Doctor Name</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Specialisation</th>
+                <th>Phone no.</th>
+                <th>Email</th>
+                <th>Method</th>
+                <th>Token</th>
+                <th>Comments</th>
+            </thead>
+            <tbody>
+                {{!-- each is template engine function which is used for iteration --}}
+                {{#each applist}}
+                <tr>
+                    <td>{{appId}}</td>
+                    <td>{{pname}}</td>
+                    <td>{{dname}}</td>
+                    <td>{{date}}</td>
+                    <td>{{time}}</td>
+                    <td>{{specialisation}}</td>
+                    <td>{{pno}}</td>
+                    <td>{{email}}</td>
+                    <td>{{method}}</td>
+                    <td>{{a_token}}</td>
+                    <td>{{com}}</td>
+                </tr>
+                {{/each}}
+
+            </tbody>
+        </table>
+
+        <button class="btn2"><a href="home_d">Go Back</a></button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Leave</title>
+    <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
+</head>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        background-image: linear-gradient(135deg, #EA5455 5%, #FEB692 100%);
+        margin: 0%;
+        padding: 25%;
+        text-align: center;
+    }
+
+    h1 {
+        width: 50%;
+        color: white;
+        margin-top: -26%;
+        margin-left: 26%;
+        text-shadow: 0 5px 5px black;
+    }
+
+    .f1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .l1 {
+        position: absolute;
+        left: 40%;
+        top: 35%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l2 {
+        position: absolute;
+        left: 40%;
+        top: 41%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l3 {
+        position: absolute;
+        left: 40%;
+        top: 46%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l4 {
+        position: absolute;
+        left: 40%;
+        top: 51%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l5 {
+        position: absolute;
+        left: 40%;
+        top: 56%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l6 {
+        position: absolute;
+        left: 33%;
+        top: 62%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l7 {
+        position: absolute;
+        left: 40%;
+        top: 66%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l8 {
+        position: absolute;
+        left: 40%;
+        top: 71%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    .l9 {
+        position: absolute;
+        left: 40%;
+        top: 76%;
+        color: white;
+        font-size: 19px;
+        text-shadow: 0 3px 5px black;
+    }
+
+    input {
+        border-radius: 10px;
+        border: 1px solid white;
+        color: #123597;
+        box-shadow: 0 2px 4px black;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #spec {
+        position: absolute;
+        left: 107%;
+        top: 17%;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    #time {
+        position: absolute;
+        left: 107%;
+        top: 17%;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    #name {
+        position: absolute;
+        left: 107%;
+        top: 17%;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    #tm {
+        position: absolute;
+        left: 107%;
+        top: -4%;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    .btn {
+        position: absolute;
+        left: 47%;
+        top: 61%;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    .btn2 {
+        position: absolute;
+        left: 47%;
+        top: 70%;
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    a:link {
+        text-decoration: none;
+    }
+
+    h4 {
+        position: absolute;
+        left: 36%;
+        top: 63%;
+        color: white;
+        text-shadow: 0 5px 5px black;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <h1>Edit leave list for doctor</h1>
+        <form action="/editSch" method="post">
+            <label class="l1"> Select doctor<input type="text" id="name" name="sname" placeholder="Enter your name"
+                    value="{{sdoc}}" readonly></label>
+            <label class="l2"> Select Start Date<input type="date" id="tm" name="sdate" placeholder="Enter Start date"
+                    value="{{sdate}}"></label>
+            <label class="l3"> Select End Date<input type="date" id="tm" name="edate" placeholder="Enter End date"
+                    value="{{edate}}"></label>
+            <label for="" class="l4">Specilization
+                <select name="spec" id="spec">
+                    <option value="Choose">Choose</option>
+                    <option value="Cardiologist">Cardiologist</option>
+                    <option value="Neurologist">Neurologist</option>
+                    <option value="Pediatrician">Pediatrician</option>
+                </select></label>
+            <label for="" class="l5">Select Status
+                <select name="status" id="time">
+                    <option value="Choose">Choose</option>
+                    <option value="Available">Available</option>
+                    <option value="Not-available">Not-available</option>
+                </select></label>
+            <h4> ***enter only startdate if leave is required for only one day*** </h4>
+            <button type="submit" value="submit" class="btn">Submit</button>
+            <button class="btn2"><a href="/schlist">Go Back</a></button>
+        </form>
+    </div>
+</body>
+
+</html>

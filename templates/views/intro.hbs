@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
+    <style>
+        body {
+            background-image: linear-gradient(135deg, #EA5455 10%,#FEB692 100%);
+        }
+
+        div {
+            background-image: linear-gradient(135deg, #97ABFF 10%, #123597 100%);
+            width: 43%;
+            /*border: 3px solid linear-gradient(135deg, #cc208e 10%, #6713d2 100%);*/
+            box-shadow: 10px;
+            box-shadow: 0 14px 28px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            padding: 3%;
+            padding-bottom: 19%;
+            margin-left: 26%;
+            margin-top: 12%;
+            position: fixed;
+        }
+
+        h1 {
+            position: absolute;
+            width: 50%;
+            color: white;
+            margin-top: 23%;
+            text-shadow: 0 1px 2px;
+        }
+
+        ul {
+            position: absolute;
+            display: grid;
+            /* float: left; */
+            margin-left: 50%;
+        }
+
+        button {
+            margin: 10px;
+            /* border: none; */
+            border-radius: 10px;
+            border: 1px solid white;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 2px 4px;
+            padding: 4px;
+        }
+
+        a{
+            color: #123597;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+        img{
+            position: absolute;
+            width: 20%;
+            margin-left: 45px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conatiner">
+        <img src="/images/icon.png" alt="clinic logo">
+        <h1>Clinic Management System</h1>
+        <ul>
+            <button class="btn"><a href="index">Register as patient</a></button>
+            <button class="btn"><a href="login">Login as patient</a></button>
+            <button class="btn"><a href="a-login">Login as admin</a></button>
+            <button class="btn"><a href="d-login">Login as doctor</a></button>
+            <button class="btn"><a href="applicant">Applicant's page for doctor</a></button>
+        </ul>
+    </div>
+</body>
+
+</html>

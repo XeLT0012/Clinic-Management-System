@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
+    <style>
+        body {
+            background-image: linear-gradient(135deg, #EA5455 10%,#FEB692 100%);
+        }
+
+        .container {
+            background-image: linear-gradient(135deg, #97ABFF 10%, #123597 100%);
+            width: 43%;
+           /* border: 3px solid linear-gradient(135deg, #cc208e 10%, #6713d2 100%);*/
+            box-shadow: 10px;
+            box-shadow: 0 14px 28px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            padding: 3%;
+            padding-bottom: 22%;
+            margin-left: 26%;
+            margin-top: 12%;
+            position: fixed;
+        }
+
+        h1 {
+            position: absolute;
+            width: 50%;
+            color: white;
+            margin-top: 29%;
+            text-shadow: 0 1px 2px;
+        }
+
+        ul a {
+            color: white;
+            text-shadow: 0 1px 2px;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+        img {
+            position: absolute;
+            width: 20%;
+            margin-top: 7%;
+            margin-left: 45px;
+        }
+
+        form {
+            display: inline-block;
+            position: absolute;
+            float: right;
+            margin-top: -2%;
+            margin-left: 60%;
+        }
+
+        input {
+            padding: 3px;
+            margin: 3%;
+            border-radius: 10px;
+            border: 1px solid white;
+            color: #123597;
+            box-shadow: 0 2px 4px;
+        }
+
+        ::-webkit-input-placeholder {
+            color: #123597;
+        }
+
+        .btn1 {
+            color: #123597;
+            position: absolute;
+            margin-left: -36%;
+            margin-top: 23%;
+            border: 1px solid white;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .btn2 {
+            position: absolute;
+            margin-left: -81%;
+            margin-top: 23%;
+            border: 1px solid white;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .btn2 a{
+            color: #123597;
+        }
+
+        .container ul {
+            padding: 2%;
+            margin: 3%;
+            border-radius: 10px;
+
+            color: white;
+
+        }
+
+        .container ul select {
+            border-radius: 10px;
+            color: #123597;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Applicant's page</h1>
+        <img src="/images/icon.png" alt="">
+        <form action="/applicant" method="post">
+            <input type="text" id="doc" name="doc" placeholder="Enter Doctor's Name">
+            <ul> Enter DateofBirth <input type="date" id="dateb" name="dateb" placeholder="Enter DateofBirth"> </ul> 
+            <input type="text" id="qua" name="qua" placeholder="Qualification">
+            <ul class="label1">
+                <label for="">Specilization</label>
+                <select name="spec" id="spec">
+                    <option value="Choose">Choose</option>
+                    <option value="Cardiologist">Cardiologist</option>
+                    <option value="Neurologist">Neurologist</option>
+                    <option value="Pediatrician">Pediatrician</option>
+                    <option value="Gynecologist">Gynecologist</option>
+                    <option value="Psychiatrist">Psychiatrist</option>
+                </select>
+            </ul>
+            <ul class="label2">
+                <label for="">Gender</label>
+                <select name="gen" id="gen">
+                    <option value="Choose">Choose</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </ul>
+            <input type="email" id="ema" name="ema" placeholder="Enter Email">
+            <input type="number" id="num" name="num" placeholder="Enter Phonenumber">
+            <button class="btn1" type="submit" value="submit">Submit</button>
+            <button class="btn2"><a href="intro">Go Back</a></button>
+        </form>
+    </div>
+</body>
+
+</html>
